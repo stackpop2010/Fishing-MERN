@@ -1,0 +1,32 @@
+:root {
+  color: #00c4cc;
+  font-family: Gill Sans, Verdana;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #81f1f7;
+  background-image: url("https://dodo.ac/np/images/0/07/Nookipedia_-_Leaf_Background_Spring.jpg");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --green: #9dffb0;
+  --blue: #81f1f7;
+  --white: #fffffa;
+  --brown: 	#c48d3f;
+  --yellow: #fff563; 
+  
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}

@@ -1,0 +1,156 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color: transparent;
+  --green: #9dffb0;
+  --blue: #81f1f7;
+  --white: #fffffa;
+  --brown: 	#c48d3f;
+  --yellow: #fff563; 
+  --pink: #fdc0c7;
+  
+}
+
+body{
+  font-family: Gill Sans, Verdana;
+  background-color: transparent;
+  color: #c48d3f;
+  margin: 8px;
+  padding: 8px;
+}
+
+p {
+  text-transform: none;
+}
+
+img {
+  border-radius: 8px;
+  max-height: 200px;}
+
+.app {
+  background-color: transparent;
+  color: #c48d3f;
+  font-family: Gill Sans, Verdana;
+	font-size: 11px;
+	line-height: 14px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: bold;
+  margin: 8px;
+  padding: 8px;
+}
+
+header {
+  margin: 8px;
+  padding: 8px;
+  background-color: #9dffb0;
+  border-radius: 12pt;
+  color:	#c48d3f;
+  
+}
+
+footer{
+  color: #00c4cc;
+  margin: 8px;
+  padding: 8px;
+  background-color: #9dffb0;
+  border-radius: 12pt;
+  text-align: left;
+  --background-image: url("https://dodo.ac/np/static/errorpage/img/grass.png");
+}
+
+
+table {
+  width: 100%; 
+  border-collapse: separate; 
+  border-color: #7d2ae8;
+  border-radius: 12pt;
+  font-family: Gill Sans, Verdana;
+  text-transform: none;
+  font-weight: bold;
+
+}
+
+
+tr, th{
+  border-color: #81f1f7;
+  border: 2px solid ; 
+  padding: 10px; 
+  color: #c48d3f;
+  background-color: #9dffb0;
+}
+
+tr, td {
+  border: 2px solid ; 
+  border-spacing: 3px;
+  padding: 10px; 
+  text-align: left; 
+  border-color: #81f1f7;
+  border-radius: 12pt;
+  font-weight: normal;
+  color: #00c4cc;
+  background-color: #fffffa;
+  
+  font-size: medium;
+  
+}
+
+th{
+  background: #9dffb0;
+  color: #c48d3f;
+  font-weight: bold; 
+  text-align: center; 
+  border-radius: 12pt;
+  font-weight: bold;
+  border: none;
+  
+}
+
+.no-border-row  {
+  border: none;
+  color: #fdc0c7;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: x-large;
+  border: 2px solid ; 
+  border-spacing: 3px;
+  padding: 10px; 
+  text-align: left; 
+  border-color: #81f1f7;
+  border-radius: 12pt;
+}
+
+a {
+  color:#fdc0c7;
+  cursor: pointer;
+}
+
+button {
+  background-color:	#9dffb0;
+  font-family: Gill Sans, Verdana;
+  border-radius: 12px;
+  color: #c48d3f;
+  border: 2px solid; 
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  font-size: 16px;
+  
+}
+
+input {
+  background-color: #fdc0c7;
+  font-family: Gill Sans, Verdana;
+  color: #c48d3f;
+}
+
+
+select {
+  background-color: #fdc0c7;;
+  color: #c48d3f;
+  font-family: Gill Sans, Verdana;
+}
+
+
