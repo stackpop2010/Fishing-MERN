@@ -1,0 +1,48 @@
+#Python Scraper Tool used to scrape the thumbnail images
+
+import requests
+from bs4 import BeautifulSoup
+import time
+
+BASE_URL = "https://nookipedia.com"
+CATEGORY_URL = f"{BASE_URL}/wiki/Category:New_Horizons_fish_icons"
+
+def get_gallery_file_links(category_url):
+    resp = requests.get(category_url)
+    soup = BeautifulSoup(resp.text, "html.parser")
+    # Find all links to file pages
+    links = []
+    for a in soup.find_all("a", class_="galleryfilename"):
+        href = a.get("href")
+        if href and href.startswith("/wiki/File:"):
+            links.append(BASE_URL + href)
+    return links
+
+def get_full_image_url(file_page_url):
+    resp = requests.get(file_page_url)
+    soup = BeautifulSoup(resp.text, "html.parser")
+    div = soup.find("div", class_="fullImageLink")
+    if div:
+        a = div.find("a")
+        if a and a.get("href"):
+            return a.get("href")
+    return None
+
+def main():
+    file_page_links = get_gallery_file_links(CATEGORY_URL)
+    print(f"Found {len(file_page_links)} file pages.")
+    image_urls = []
+    for link in file_page_links:
+        url = get_full_image_url(link)
+        if url:
+            print(url)
+            image_urls.append(url)
+        else:
+            print(f"Image not found on: {link}")
+        time.sleep(0.5)  # Be polite to the server!
+    print(f"\nTotal images found: {len(image_urls)}")
+    # If you want to use the list elsewhere, just return image_urls
+    return image_urls
+
+if __name__ == "__main__":
+    main()
